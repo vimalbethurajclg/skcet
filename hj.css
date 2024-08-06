@@ -1,0 +1,197 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+nav.tabs {
+    margin-top: 20px;
+}
+
+.tabs button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.tabs button.active {
+    background-color: #667eea;
+    color: white;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+#portfolio, #About, #Contact {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#portfolio h2, #About h2, #Contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-left: 20%;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.project-info p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.project:hover .project-info h3 {
+    color: #667eea;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Web Chain Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the background */
+    z-index: -1; /* Place behind all other content */
+}
+
+.background-animation canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+}

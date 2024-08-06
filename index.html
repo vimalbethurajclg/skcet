@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <img src="logo.png" alt="Quiz Logo" id="logo">
+        <h1 id="title">Ultimate Quiz Challenge</h1>
+    </div>
+    <div id="quiz-container">
+        <div id="quiz">
+            <h2 id="question">Question text</h2>
+            <ul id="choices">
+                <li><button class="choice-btn">Choice 1</button></li>
+                <li><button class="choice-btn">Choice 2</button></li>
+                <li><button class="choice-btn">Choice 3</button></li>
+                <li><button class="choice-btn">Choice 4</button></li>
+            </ul>
+        </div>
+        <div id="results" class="hidden">
+            <h2 id="score"></h2>
+            <div id="meter-container">
+                <svg id="meter" viewBox="0 0 100 50">
+                    <circle cx="50" cy="50" r="45" stroke="black" stroke-width="3" fill="none"/>
+                    <line id="needle" x1="50" y1="50" x2="50" y2="10" stroke="red" stroke-width="2"/>
+                </svg>
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+            <button id="feedback-btn">Give Feedback</button>
+        </div>
+    </div>
+    <div id="feedback-container" class="hidden">
+        <h2>Feedback</h2>
+        <textarea id="feedback" placeholder="Enter your feedback here..."></textarea>
+        <button id="submit-feedback-btn">Submit Feedback</button>
+    </div>
+    <div id="confetti-container" class="hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
