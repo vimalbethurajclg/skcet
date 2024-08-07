@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz-Check</title>
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="" class="logo">Quiz-Check</a>
+            <nav class="navbar">
+                <a href="#bttuns">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Login!</a>
+            </nav>
+        </header>
+        <div class="container">
+            <section class="quiz-sec">
+                <div class="qbox">
+                    <h1>Questions</h1>
+                    <div class="headerq">
+                        <span class="topscore">Score : 0 / 5</span>
+                    </div>
+                    <h2 class="qtext">What does HTML stand for?</h2>
+                    <div class="optionlist">
+                        <!-- Options will be inserted here dynamically -->
+                    </div>
+                    <div class="qfooter">
+                        <span class="qtotal">1 of 5 Questions</span>
+                        <button class="nextq">Next</button>
+                    </div>
+                </div>
+            </section>
+            <section class="front-page">
+                <div class="hcontent">
+                    <h1>Let's - Thrust</h1>
+                    <p>"Challenge accepted? Let’s dive in!🕵️‍♂️The ultimate quiz awaits!🏆💡"</p>
+                    <button class="startbut">Begin</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="rulespage">
+        <h2>Regulation</h2>
+        <span class="info">1. Each quiz consists of a set number of questions.</span>
+        <span class="info">2. Users must select one of the four provided options for each question.</span>
+        <span class="info">3. Once an answer is submitted, it cannot be changed.</span>
+        <span class="info">4. A score summary is provided at the end of the quiz.</span>
+        <div class="bttuns">
+            <button class="info exitbutton">Exit</button>
+            <a class="info continuebutton" href="#">Continue</a>
+        </div>
+    </div>
+
+    <div class="result-page">
+        <div class="dashboard">
+            <div class="dashboard-inner">
+                <div class="analog-dial">
+                    <div class="needle" style="transform: translateX(-50%) rotate(0deg);"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <!-- Results will be inserted here dynamically -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

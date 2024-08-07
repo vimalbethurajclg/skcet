@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: aliceblue;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    z-index: 100;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: blueviolet;
+}
+
+.main {
+    min-height: 100vh;
+    background: url(walp.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .3s;
+}
+
+.main.active {
+    filter: blur(16px);
+}
+
+.main.remove {
+    filter: blur(0px);
+}
+
+.front-page {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hcontent {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hcontent h1 {
+    font-size: 70px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hcontent p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.startbut {
+    width: 190px;
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgb(230, 145, 65);
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.startbut:hover {
+    background: black;
+}
+
+.rulespage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    background: rgb(254, 254, 254);
+    border-radius: 7px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.rulespage.active {
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgb(238, 225, 182);
+    border-radius: 10px;
+}
+
+.rulespage.remove {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.rulespage h2 {
+    font-size: 25px;
+    color: black;
+    background-color: rgb(231, 188, 120);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.rulespage .info {
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    margin: 4px 0px;
+    display: flex;
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+.rulespage .bttuns {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rulespage .bttuns .info {
+    display: flex;
+    color: rgb(254, 254, 254);
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: rgb(230, 145, 65);
+    border: 2px solid rgb(230, 145, 65);
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.rulespage .bttuns .info:hover {
+    background: black;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
+}
+
+.quiz-sec {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(22, 8, 8);
+    display: flex;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+    z-index: 100;
+}
+
+.quiz-sec.active {
+    background: url(walp1.png) no-repeat;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.quiz-sec .qbox {
+    position: relative;
+    width: 500px;
+    background: rgb(53, 43, 43);
+    border: 2px solid rgb(231, 188, 120);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.qbox h1 {
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(45deg, transparent, rgb(245, 176, 73), transparent);
+}
+
+.qbox .headerq {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-bottom: 2px solid rgb(231, 188, 120);
+    padding: 20px 0;
+}
+
+.headerq span {
+    font-size: 18px;
+}
+
+.qbox .qtext {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.optionlist .options {
+    font-size: 16px;
+    background: transparent;
+    padding: 12px;
+    border: 1px solid rgb(231, 188, 120);
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.optionlist .options:hover {
+    background: rgb(85, 84, 84);
+}
+
+.optionlist .options.correct {
+    background: rgba(90, 192, 90, 0.811);
+    color: white;
+}
+
+.optionlist .options.wrong {
+    background: rgb(205, 67, 67);
+    color: white;
+}
+
+.optionlist .options.disable {
+    pointer-events: none;
+}
+
+.qfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.qfooter .qtotal {
+    font-size: 18px;
+}
+
+.nextq {
+    background: rgb(254, 254, 254);
+    border: 1px solid rgb(231, 188, 120);
+    color: black;
+    border-radius: 8px;
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nextq.active {
+    background: rgb(230, 145, 65);
+    color: white;
+    border: 1px solid rgb(230, 145, 65);
+}
+
+.result-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    background: rgb(254, 254, 254);
+    border-radius: 7px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.result-page.active {
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgb(238, 225, 182);
+    border-radius: 10px;
+    border: 2px;
+    border-color: black
+}
+
+.result-page .text {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(45, 43, 43);
+}
+
+.restart-button {
+    margin-top: 20px;
+    background: rgb(230, 145, 65);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.restart-button:hover {
+    background: black;
+}
